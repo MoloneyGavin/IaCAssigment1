@@ -1,0 +1,11 @@
+Resources:
+  PublicSecurityGroup:
+    Type: AWS::EC2::SecurityGroup
+    Properties:
+      GroupDescription: Security group for public instances
+      SecurityGroupIngress:
+        - CidrIp: !Ref CIDRIPAddress
+          FromPort: 22
+          ToPort: 22
+          IpProtocol: tcp
+  #test
